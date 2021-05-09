@@ -12,7 +12,7 @@ public class SaleDTO {
 	private Double amount;
 	private LocalDate date;
 	
-	private SellerDTO saller;
+	private SellerDTO seller;
 	
 	public SaleDTO() {
 	}
@@ -23,7 +23,7 @@ public class SaleDTO {
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
-		this.saller = saller;
+		this.seller = saller;
 	}
 	
 	public SaleDTO(Sale sale) {
@@ -32,7 +32,7 @@ public class SaleDTO {
 		deals = sale.getDeals();
 		amount = sale.getAmount();
 		date = sale.getDate();
-		saller = new SellerDTO(sale.getSeller());
+		seller = new SellerDTO(sale.getSeller());
 	}
 
 	public Long getId() {
@@ -76,10 +76,10 @@ public class SaleDTO {
 	}
 
 	public SellerDTO getSaller() {
-		return saller;
+		return seller;
 	}
 
 	public void setSaller(SellerDTO saller) {
-		this.saller = saller;
+		this.seller = saller;
 	}
 }
